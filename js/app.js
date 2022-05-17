@@ -39,6 +39,43 @@ let seattle = {
 seattle.gethourSum();
 seattle.render();
 
+//Tokyo sales data
+
+let tokyo = {
+  city: 'Tokyo',
+  minCust: 3,
+  maxCust: 24,
+  ave: 1.2,
+  totalCookies: 0,
+  gethourSum: function () {
+    let hourSum = Math.floor(getRandomInt(this.minCust, this.maxCust) * this.ave);
+    this.totalCookies += hourSum;
+    return hourSum;
+  },
+
+  render: function () {
+    let pElem = document.createElement('p');
+    cookieSection.appendChild(pElem);
+    pElem.textContent = `${this.city}`;
+
+
+    let ulElem = document.createElement('ul');
+    pElem.appendChild(ulElem);
+
+    for (i = 0; i < hours.length; i++) {
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]}am: ${this.gethourSum()} cookies`;
+      ulElem.appendChild(liElem);
+    }
+    let liElem = document.createElement('li');
+    liElem.textContent = `Total: ${this.totalCookies} cookies`;
+    ulElem.appendChild(liElem);
+  }
+}
+
+tokyo.gethourSum();
+tokyo.render();
+
 // Dubai sales data
 
 let dubai = {
@@ -112,7 +149,7 @@ let paris = {
 paris.gethourSum();
 paris.render();
 
-//lima sales data
+//Lima sales data
 
 let lima = {
   city: 'Lima',
