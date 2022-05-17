@@ -43,9 +43,9 @@ seattle.render();
 
 let dubai = {
   city: 'Dubai',
-  minCust: 3,
-  maxCust: 24,
-  ave: 1.2,
+  minCust: 11,
+  maxCust: 38,
+  ave: 3.7,
   totalCookies: 0,
   gethourSum: function () {
     let hourSum = Math.floor(getRandomInt(this.minCust, this.maxCust) * this.ave);
