@@ -69,17 +69,25 @@ rendCitysales();
 
 function generateTable() {
   let tableElem = document.createElement('table');
-  // tableElem.id = cookieSection;
   let headerRow = document.createElement('tr');
+
+  let firstElem = document.createElement ('th');
+  firstElem.textContent = 'C/T';
+  headerRow.appendChild(firstElem);
 
   for (let i = 0; i < hours.length; i++) {
     let thElem = document.createElement('th');
     thElem.textContent = `${hours[i]}:00`;
     headerRow.appendChild(thElem);
   }
+  //creat the 'total' cell
+  let totalElem = document.createElement ('th');
+  totalElem.textContent = 'Total';
+  headerRow.appendChild(totalElem);
+//wrap up head row
   tableElem.appendChild(headerRow);
+
   for (let i = 0; i < citySales.length; i++) {
-    citySales[i].hourTotal;
     let trElem = document.createElement('tr');
     let tdElem = document.createElement('td');
     tdElem.textContent = citySales[i].city;
@@ -91,7 +99,9 @@ function generateTable() {
       trElem.appendChild(tdElem2);
     }
     let resultTd = document.createElement('td');
-    resultTd.textContent = citySales[i].totalCookies
+    resultTd.textContent = citySales[i].totalCookies;
+    trElem.appendChild(resultTd);
+
   }
   cookieSection.appendChild(tableElem);
 };
