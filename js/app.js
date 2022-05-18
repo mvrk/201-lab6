@@ -65,13 +65,13 @@ function rendCitysales() {
 rendCitysales();
 
 
-// // Table generation
+// Table generation
 
 function generateTable() {
   let tableElem = document.createElement('table');
   let headerRow = document.createElement('tr');
-// Creat the first 'City/Time' cell 
-  let firstElem = document.createElement ('th');
+  // Creat the first 'City/Time' cell 
+  let firstElem = document.createElement('th');
   firstElem.textContent = 'City/Time';
   headerRow.appendChild(firstElem);
 
@@ -81,10 +81,10 @@ function generateTable() {
     headerRow.appendChild(thElem);
   }
   //creat the 'total' cell
-  let totalElem = document.createElement ('th');
+  let totalElem = document.createElement('th');
   totalElem.textContent = 'Total';
   headerRow.appendChild(totalElem);
-//wrap up head row
+  //wrap up head row
   tableElem.appendChild(headerRow);
 
   for (let i = 0; i < citySales.length; i++) {
@@ -108,7 +108,7 @@ function generateTable() {
 
 generateTable();
 
-// // Seattle sales data
+// Seattle sales data
 
 // let seattle = {
 //   city: 'Seattle',
