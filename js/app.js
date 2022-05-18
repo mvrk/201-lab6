@@ -62,7 +62,7 @@ function rendCitysales() {
   }
 }
 
-rendCitysales();
+// rendCitysales();
 
 
 // Table generation
