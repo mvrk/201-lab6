@@ -65,7 +65,7 @@ function rendCitysales() {
 rendCitysales();
 
 
-// // Table Dom Render
+// // Table generation
 
 function generateTable() {
   let tableElem = document.createElement('table');
@@ -87,7 +87,7 @@ function generateTable() {
     tableElem.appendChild(trElem);
     for (let j = 0; j < hours.length; j++) {
       let tdElem2 = document.createElement('td');
-      tdElem2.textContent = citySales[i].hourTotal;
+      tdElem2.textContent = citySales[i].gethourSum();
       trElem.appendChild(tdElem2);
     }
     let resultTd = document.createElement('td');
