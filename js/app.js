@@ -2,7 +2,7 @@
 
 let hours = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 let cookieSection = document.getElementById("cookieSection");
-// let salesTable = document.getElementById("salesTable");
+
 function getRandomInt(minCust, maxCust) {
   return Math.floor(Math.random() * (maxCust - minCust + 1) + minCust);
 }
@@ -65,21 +65,29 @@ function rendCitysales() {
 rendCitysales();
 
 
-// // Table generation
+// Table generation
 
 function generateTable() {
   let tableElem = document.createElement('table');
-  // tableElem.id = cookieSection;
   let headerRow = document.createElement('tr');
+  // Creat the first 'City/Time' cell 
+  let firstElem = document.createElement('th');
+  firstElem.textContent = 'City/Time';
+  headerRow.appendChild(firstElem);
 
   for (let i = 0; i < hours.length; i++) {
     let thElem = document.createElement('th');
     thElem.textContent = `${hours[i]}:00`;
     headerRow.appendChild(thElem);
   }
+  //creat the 'total' cell
+  let totalElem = document.createElement('th');
+  totalElem.textContent = 'Total';
+  headerRow.appendChild(totalElem);
+  //wrap up head row
   tableElem.appendChild(headerRow);
+
   for (let i = 0; i < citySales.length; i++) {
-    citySales[i].hourTotal;
     let trElem = document.createElement('tr');
     let tdElem = document.createElement('td');
     tdElem.textContent = citySales[i].city;
@@ -91,14 +99,16 @@ function generateTable() {
       trElem.appendChild(tdElem2);
     }
     let resultTd = document.createElement('td');
-    resultTd.textContent = citySales[i].totalCookies
+    resultTd.textContent = citySales[i].totalCookies;
+    trElem.appendChild(resultTd);
+
   }
   cookieSection.appendChild(tableElem);
 };
 
 generateTable();
 
-// // Seattle sales data
+// Seattle sales data
 
 // let seattle = {
 //   city: 'Seattle',
