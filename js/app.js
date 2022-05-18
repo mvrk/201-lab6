@@ -2,7 +2,7 @@
 
 let hours = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 let cookieSection = document.getElementById("cookieSection");
-// let salesTable = document.getElementById("salesTable");
+
 function getRandomInt(minCust, maxCust) {
   return Math.floor(Math.random() * (maxCust - minCust + 1) + minCust);
 }
@@ -70,9 +70,9 @@ rendCitysales();
 function generateTable() {
   let tableElem = document.createElement('table');
   let headerRow = document.createElement('tr');
-
+// Creat the first 'City/Time' cell 
   let firstElem = document.createElement ('th');
-  firstElem.textContent = 'C/T';
+  firstElem.textContent = 'City/Time';
   headerRow.appendChild(firstElem);
 
   for (let i = 0; i < hours.length; i++) {
