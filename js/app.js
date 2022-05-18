@@ -62,7 +62,7 @@ function rendCitysales() {
   }
 }
 
-rendCitysales();
+//rendCitysales();
 
 
 // Table generation
@@ -86,7 +86,7 @@ function generateTable() {
   headerRow.appendChild(totalElem);
   //wrap up head row
   tableElem.appendChild(headerRow);
-
+// nest looping, fast loop hourly cookies, slow loop, cities
   for (let i = 0; i < citySales.length; i++) {
     let trElem = document.createElement('tr');
     let tdElem = document.createElement('td');
