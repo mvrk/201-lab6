@@ -1,31 +1,87 @@
-h1 {
-  font-family: helvetica;
+header {
+  background-color: #696969;
+  height: 20px;
+  margin-bottom: 30px;
 }
 
-p {
-  color: red;
+nav h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 15px;
 }
 
-section p.more-content {
-  background-color: #FF0000;
+nav {
+  width: 960px;
+  margin:auto;
 }
 
-.more-content {
-  background-color: #0000FF;
+nav img {
+  float: left;
+  margin-top: 0px;
+  margin-right: 1px;
+  padding-left: 0px;
 }
 
-#something-else {
-  border: 5px dashed #00FF00;
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
 }
+
+nav ul li {
+  margin-top: 0px;
+  color:aquamarine;
+
+}
+
+nav ul li:hover {
+  background-color:rgb(20, 214, 150);
+}
+
+/* p {
+
+} */
 
 footer{
-  position:fixed;
-  bottom:0;
-  left:0;
+  bottom: 10px;
+  left: 10px;
  }
 
- div {
-  position:fixed;
-  bottom:0px;
-  left:10%;
+/* extra css */
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+  background-color: #696969;
+  height: 140px;
+  margin-bottom: 30px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #777;
+}
+
+main {
+  width: 960px;
+  margin: auto;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+section {
+  
+padding: 5%;
+
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
