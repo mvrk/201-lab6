@@ -33,19 +33,19 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color:rgb(20, 214, 150);
+  background-color:rgb(226, 183, 158);
 }
 
-/* p {
+section { 
+  padding: 20px;
+  margin: 20px;
 
-} */
+}
 
 footer{
   bottom: 10px;
   left: 10px;
  }
-
-/* extra css */
 
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -60,7 +60,7 @@ header {
 
 a {
   text-decoration: none;
-  color: #777;
+  color: rgb(5, 5, 5);
 }
 
 main {
@@ -75,13 +75,18 @@ main ul {
   margin-bottom: 30px;
 }
 
-section {
+/* section {
   
-padding: 5%;
+padding: 3%;
 
-}
+} */
 
 h2 {
   font-size: 25px;
   margin-bottom: 10px;
+}
+
+footer {
+  height: 15px;
+  background-color: #555;
 }
