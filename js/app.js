@@ -54,15 +54,6 @@ new Citydata('Dubai', 11, 38, 3.7);
 new Citydata('Paris', 20, 38, 2, 3);
 new Citydata('Lima', 2, 16, 4.6);
 
-// looping call functions
-function rendCitysales() {
-  for (let j = 0; j < citySales.length; j++) {
-    citySales[j].getRandomInt;
-    citySales[j].render();
-  }
-}
-
-//rendCitysales();
 
 
 // Table generation
@@ -86,7 +77,7 @@ function generateTable() {
   headerRow.appendChild(totalElem);
   //wrap up head row
   tableElem.appendChild(headerRow);
-// nest looping, fast loop hourly cookies, slow loop, cities
+  // nest looping, fast loop hourly cookies, slow loop, cities
   for (let i = 0; i < citySales.length; i++) {
     let trElem = document.createElement('tr');
     let tdElem = document.createElement('td');
@@ -107,7 +98,41 @@ function generateTable() {
 };
 
 generateTable();
+// ---------------------------------------------------------------
+// event handler
 
+let myForm = document.getElementById('my-Form');
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let city = event.target.city.value;
+  console.log(city);
+  let minCust = +event.target.minCust.value;
+  console.log(minCust);
+  let maxCust = +event.target.maxCust.value;
+  console.log(maxCust);
+  let ave= +event.target.ave.value;
+  console.log(ave);
+}
+
+let newStore = new Citydata(city, minCust, maxCust, ave);
+
+myForm.addEventListener('submit', handleSubmit);
+
+
+// looping call functions
+function rendCitysales() {
+  for (let j = 0; j < citySales.length; j++) {
+    citySales[j].getRandomInt;
+    citySales[j].render();
+  }
+}
+
+rendCitysales();
+
+
+// ------------------------------------------------------------------
 // Seattle sales data
 
 // let seattle = {
