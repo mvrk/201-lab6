@@ -64,7 +64,6 @@ function rendCitysales() {
 // rendCitysales();
 
 // generate new object using form data
-
 let myForm = document.getElementById('my-Form');
 
 function handleSubmit(event) {
@@ -86,7 +85,7 @@ function handleSubmit(event) {
 
   generateTable();
 }
-  myForm.addEventListener('submit', handleSubmit);
+myForm.addEventListener('submit', handleSubmit);
 
 
 // Table generation
