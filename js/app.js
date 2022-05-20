@@ -54,6 +54,40 @@ new Citydata('Dubai', 11, 38, 3.7);
 new Citydata('Paris', 20, 38, 2, 3);
 new Citydata('Lima', 2, 16, 4.6);
 
+function rendCitysales() {
+  for (let j = 0; j < citySales.length; j++) {
+    citySales[j].getRandomInt;
+    citySales[j].render();
+  }
+}
+
+// rendCitysales();
+
+
+// generate new object using form data
+
+let myForm = document.getElementById('my-Form');
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let city = event.target.city.value;
+  console.log(city);
+  let minCust = +event.target.minCust.value;
+  console.log(minCust);
+  let maxCust = +event.target.maxCust.value;
+  console.log(maxCust);
+  let ave = +event.target.ave.value;
+  console.log(ave);
+
+  let newStore = new Citydata(city, minCust, maxCust, ave);
+  newStore.gethourSum();
+  // newStore.render();
+  document.querySelector('table').remove();
+
+  generateTable();
+}
+  myForm.addEventListener('submit', handleSubmit);
 
 
 // Table generation
@@ -101,35 +135,36 @@ generateTable();
 // ---------------------------------------------------------------
 // event handler
 
-let myForm = document.getElementById('my-Form');
+// let myForm = document.getElementById('my-Form');
 
-function handleSubmit(event) {
-  event.preventDefault();
+// function handleSubmit(event) {
+//   event.preventDefault();
 
-  let city = event.target.city.value;
-  console.log(city);
-  let minCust = +event.target.minCust.value;
-  console.log(minCust);
-  let maxCust = +event.target.maxCust.value;
-  console.log(maxCust);
-  let ave= +event.target.ave.value;
-  console.log(ave);
-}
+//   let city = event.target.city.value;
+//   console.log(city);
+//   let minCust = +event.target.minCust.value;
+//   console.log(minCust);
+//   let maxCust = +event.target.maxCust.value;
+//   console.log(maxCust);
+//   let ave = +event.target.ave.value;
+//   console.log(ave);
 
-let newStore = new Citydata(city, minCust, maxCust, ave);
-
-myForm.addEventListener('submit', handleSubmit);
+//   let newStore = new Citydata(city, minCust, maxCust, ave);
+//   newStore.gethourSum();
+//   newStore.render();
+// }
+//   myForm.addEventListener('submit', handleSubmit);
 
 
 // looping call functions
-function rendCitysales() {
-  for (let j = 0; j < citySales.length; j++) {
-    citySales[j].getRandomInt;
-    citySales[j].render();
-  }
-}
+// function rendCitysales() {
+//   for (let j = 0; j < citySales.length; j++) {
+//     citySales[j].getRandomInt;
+//     citySales[j].render();
+//   }
+// }
 
-rendCitysales();
+// rendCitysales();
 
 
 // ------------------------------------------------------------------
