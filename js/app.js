@@ -27,6 +27,9 @@ Citydata.prototype.gethourSum = function () {
   let hourSum = Math.floor(getRandomInt(this.minCust, this.maxCust) * this.ave);
   this.totalCookies += hourSum;
   return hourSum;
+
+
+
 }
 Citydata.prototype.render = function () {
   let pElem = document.createElement('p');
@@ -116,16 +119,35 @@ function generateTable() {
     tdElem.textContent = citySales[i].city;
     trElem.appendChild(tdElem);
     tableElem.appendChild(trElem);
+
     for (let j = 0; j < hours.length; j++) {
       let tdElem2 = document.createElement('td');
       tdElem2.textContent = citySales[i].gethourSum();
       trElem.appendChild(tdElem2);
     }
+
     let resultTd = document.createElement('td');
     resultTd.textContent = citySales[i].totalCookies;
     trElem.appendChild(resultTd);
-
   }
+
+  let trElem = document.createElement('tr');
+  let htotalElem = document.createElement('td');
+  htotalElem.textContent = 'Hourly Total';
+  trElem.appendChild(htotalElem);
+
+  for (let i = 0; i < citySales.length; i++) {
+    // for (let j = 0; j < citySales.length; j++) {
+    //   citySales[j].gethourSum() += citySales[j].gethourSum();
+    //   // htotal += htotal;
+    // }
+    let tdElem = document.createElement('td');
+    tdElem.textContent = citySales[i].gethourSum();
+    trElem.appendChild(tdElem);
+  }
+
+
+  tableElem.appendChild(trElem);
   cookieSection.appendChild(tableElem);
 };
 
