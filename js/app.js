@@ -63,7 +63,6 @@ function rendCitysales() {
 
 // rendCitysales();
 
-
 // generate new object using form data
 
 let myForm = document.getElementById('my-Form');
