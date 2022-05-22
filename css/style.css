@@ -88,9 +88,9 @@ main div img {
   width: 1200px;
 }
 
-body main div li{
+/* body main div li{
   display: inline-block;
-}
+} */
   body main div li a {
   font-size: larger;
   background-color:#333333;
