@@ -1,14 +1,19 @@
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #ebebef;
-  margin: 5px;
 }
 
 header {
   width: 100%;
   background-color: #8F8877;
-  height: 140px;
+  height: 180px;
   margin-bottom: 30px;
+}
+header h1 {
+  text-align: center;
+  font-family: sans-serif, 'Arial Narrow', 'Franklin Gothic Medium', Arial, ;
+  font-size: 50px;
+  padding-top: 40px;
 }
 
 nav {
@@ -16,27 +21,31 @@ nav {
   margin: auto;
 }
 
-header nav h1 {
-  font-family: 'Arial Narrow', 'Franklin Gothic Medium', Arial, sans-serif;
-  font-size: 35px;
-  padding-top: 15px;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
 }
 
-header nav ul li:hover {
-  background-color: #895C44;;
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: #895C44;
   transform: scale(1.1);
 }
 
-header nav img {
-  float: left;
-  margin-top: 0px;
-  margin-right: 1px;
-  padding-left: 0px;
-}
 
 header nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 22px;
 }
 
@@ -45,13 +54,16 @@ a {
   color: rgb(5, 5, 5);
 }
 
-section img {
-  float: right;
-}
+
 
 main {
   width: 1200px;
   margin: auto;
+}
+
+main section {
+  float: right;
+  margin: 5px;
 }
 
 main nav {
@@ -64,6 +76,7 @@ main ul {
   margin-top: 30px;
   margin-bottom: 30px;
   padding-left: 0px;
+  background-color: #ebebef;
 }
 
 p {
@@ -71,19 +84,22 @@ p {
   white-space: 10px;
 }
 
-main div {
-  width: auto;
-  background-color: #C0BFBA;
-}
-
 main div img {
   width: 1200px;
 }
 
-body main div {
-  text-align: center;
-  font-size: larger;
+body main div li{
+  display: inline-block;
 }
+  body main div li a {
+  font-size: larger;
+  background-color:#333333;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+} 
 
 footer {
   width:100%;
@@ -112,7 +128,6 @@ footer li {
 
 button {
   float: left;
-  color: ;
   font-size: larger;
 }
 
