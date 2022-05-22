@@ -89,18 +89,20 @@ footer {
   background-color: #CB8A2D
 }
 
-footer div ul {
-  
-  display: flex;
+footer ul {
+  text-align: center;
+  /* display: flex; */
   height: max-content;
 }
 
-footer div ul li:before {
+footer li:before {
   content: "• "
 }
 
-footer div ul li {
-  
+footer li {
+  display: inline-block;
+  justify-content: space-between;
+  float:none;
   font-size: larger;
   margin: 10px;
 }
