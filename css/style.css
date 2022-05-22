@@ -5,6 +5,7 @@ body {
 }
 
 header {
+  width: auto;
   background-color: #CB8A2D;
   height: 140px;
   margin-bottom: 30px;
@@ -81,6 +82,7 @@ body main div {
 }
 
 footer {
+  width:auto;
   border: 10px;
   height: auto;
   padding: 20px;
