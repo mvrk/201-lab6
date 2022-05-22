@@ -6,7 +6,7 @@ body {
 
 header {
   width: 100%;
-  background-color: #CB8A2D;
+  background-color: #8F8877;
   height: 140px;
   margin-bottom: 30px;
 }
@@ -23,7 +23,7 @@ header nav h1 {
 }
 
 header nav ul li:hover {
-  background-color: #ebebef;
+  background-color: #895C44;;
   transform: scale(1.1);
 }
 
@@ -43,6 +43,10 @@ header nav ul {
 a {
   text-decoration: none;
   color: rgb(5, 5, 5);
+}
+
+section img {
+  float: right;
 }
 
 main {
@@ -68,8 +72,8 @@ p {
 }
 
 main div {
-  width: 1200px;
-  background-color: #ebebef;
+  width: auto;
+  background-color: #C0BFBA;
 }
 
 main div img {
@@ -86,7 +90,7 @@ footer {
   border: 10px;
   height: auto;
   padding: 20px;
-  background-color: #CB8A2D
+  background-color: #8F8877;
 }
 
 footer ul {
@@ -107,10 +111,12 @@ footer li {
 }
 
 button {
-  float: right;
+  float: left;
+  color: ;
+  font-size: larger;
 }
 
 button:hover {
-  background-color: #5cdd72;
+  background-color: #895C44;
   transform: scale(1.2);
 }
