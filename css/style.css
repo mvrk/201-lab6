@@ -1,11 +1,11 @@
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #ebebef;
+  background-color:#C0C0C0;
 }
 
 header {
   width: 100%;
-  background-color: #8F8877;
+  background-color: #895C44;
   height: 180px;
   margin-bottom: 30px;
 }
@@ -38,7 +38,7 @@ nav ul li a {
 }
 
 nav ul li:hover {
-  background-color: #895C44;
+  background-color: #532c25;
   transform: scale(1.1);
 }
 
@@ -51,7 +51,7 @@ header nav ul {
 
 a {
   text-decoration: none;
-  color: rgb(5, 5, 5);
+  color:#ebebef;
 }
 
 
@@ -76,7 +76,7 @@ main ul {
   margin-top: 30px;
   margin-bottom: 30px;
   padding-left: 0px;
-  background-color: #ebebef;
+  background-color:#333333;
 }
 
 p {
@@ -106,7 +106,7 @@ footer {
   border: 10px;
   height: auto;
   padding: 20px;
-  background-color: #8F8877;
+  background-color: #895C44;
 }
 
 footer ul {

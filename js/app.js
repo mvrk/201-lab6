@@ -34,7 +34,6 @@ Citydata.prototype.cityHourSum = function () {
   }
 }
 
-
 Citydata.prototype.render = function () {
   let pElem = document.createElement('p');
   cookieSection.appendChild(pElem);
@@ -67,9 +66,8 @@ function rendCitysales() {
     cityObject[j].render();
   }
 }
-
 // rendCitysales();
-
+generateTable();
 // generate new object using form data
 let myForm = document.getElementById('my-Form');
 
@@ -84,15 +82,18 @@ function handleSubmit(event) {
   console.log(maxCust);
   let ave = +event.target.ave.value;
   console.log(ave);
-
   let newStore = new Citydata(city, minCust, maxCust, ave);
   newStore.gethourSum();
-  // newStore.render();
+  // newStore.render(); 
+  
   document.querySelector('table').remove();
-
   generateTable();
+  // document.querySelector('tfoot').remove();  
+  cookieSection.deleteRow(-1);
 }
 myForm.addEventListener('submit', handleSubmit);
+
+
 
 // Table generation
 
@@ -145,6 +146,7 @@ function generateTable() {
       cityTotals[j] += currentCity.listHourSum[j];
     }
   }
+  //grand total
   let grandTotal = 0;
   for (let i = 0; i < cityTotals.length; i++) {
     let tdElem = document.createElement('td');
@@ -153,7 +155,7 @@ function generateTable() {
     footElem.appendChild(tdElem);
   }
 
-  console.log(cityTotals);
+  // console.log(cityTotals);
 
   let tdElem = document.createElement('td');
   tdElem.textContent = grandTotal;
@@ -162,4 +164,4 @@ function generateTable() {
   cookieSection.appendChild(tableElem);
 };
 
-generateTable();
+
