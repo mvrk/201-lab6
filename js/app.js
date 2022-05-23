@@ -2,7 +2,7 @@
 
 let hours = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 let cookieSection = document.getElementById("cookieSection");
-let cityTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let cityTotals = [];
 function getRandomInt(minCust, maxCust) {
   return Math.floor(Math.random() * (maxCust - minCust + 1) + minCust);
 }
@@ -89,7 +89,7 @@ function handleSubmit(event) {
   document.querySelector('table').remove();
   generateTable();
   // document.querySelector('tfoot').remove();  
-  cookieSection.deleteRow(-1);
+  // cookieSection.deleteRow(-1);
 }
 myForm.addEventListener('submit', handleSubmit);
 
@@ -98,6 +98,7 @@ myForm.addEventListener('submit', handleSubmit);
 // Table generation
 
 function generateTable() {
+  console.log(cityTotals);
   let tableElem = document.createElement('table');
   let headerRow = document.createElement('tr');
   // Creat the first 'City/Time' cell 
@@ -135,6 +136,7 @@ function generateTable() {
     trElem.appendChild(resultTd);
   }
   //hourly total cell
+  cityTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   let footElem = document.createElement('tfoot');
   let htotalElem = document.createElement('td');
   htotalElem.textContent = 'HourTotal';
