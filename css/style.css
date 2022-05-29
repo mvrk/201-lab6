@@ -5,14 +5,14 @@ body {
 
 header {
   width: 100%;
-  background-color: #895C44;
-  height: 180px;
+  background-color: #ffffff;
+  height: 200px;
   margin-bottom: 30px;
 }
 header h1 {
   text-align: center;
   font-family: sans-serif, 'Arial Narrow', 'Franklin Gothic Medium', Arial, ;
-  font-size: 50px;
+  font-size: 45px;
   padding-top: 40px;
 }
 
@@ -88,9 +88,6 @@ main div img {
   width: 1200px;
 }
 
-/* body main div li{
-  display: inline-block;
-} */
   body main div li a {
   font-size: larger;
   background-color:#333333;
@@ -106,7 +103,7 @@ footer {
   border: 10px;
   height: auto;
   padding: 20px;
-  background-color: #895C44;
+  background-color: #5e5858;
 }
 
 footer ul {
@@ -114,15 +111,16 @@ footer ul {
   height: max-content;
 }
 
-footer li:before {
+footer ul li:before {
   content: "• "
 }
 
 footer li {
   display: inline-block;
   justify-content: space-between;
-  float:none;
+  float:unset;
   font-size: larger;
+  position:static ;
   margin: 10px;
 }
 
