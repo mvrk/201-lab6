@@ -118,7 +118,6 @@ footer ul li:before {
 footer li {
   display: inline-block;
   justify-content: space-between;
-  float:unset;
   font-size: larger;
   position:static ;
   margin: 10px;
@@ -132,4 +131,8 @@ button {
 button:hover {
   background-color: #895C44;
   transform: scale(1.2);
+}
+
+div li img {
+  border-radius: 100%;
 }
